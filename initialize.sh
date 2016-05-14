@@ -55,8 +55,8 @@ do
       echo '$password = "'$pwd'";' >> login.php
       echo '?>' >> login.php
       
-      mysql -u $C9_USER -p $pwd -e "CREATE DATABASE artgallery"
-      mysql -u $C9_USER -p $pwd artgallery < setup.sql
+     # mysql -u $C9_USER -p$pwd -e "CREATE DATABASE artgallery"
+      mysql -u $C9_USER -p$pwd artgallery < setup.sql
       
     fi
   fi
