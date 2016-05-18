@@ -39,7 +39,7 @@ do
       echo "Creating step2 script to change PHPMyAdmin controluser password..."
       echo "#!/bin/bash" > ~/setup2.sh
       echo "sed \"s/\$dbpass=.*/\$dbpass='"$pwd"';/\" /etc/phpmyadmin/config-db.php > /etc/phpmyadmin/config-db.php" >> setup2.sh
-      chmod 711 step2.sh
+      chmod 711 setup2.sh
       
       echo 'apt-get install python-dev' >> setup2.sh
       echo 'apt-get install libjpeg-dev' >> setup2.sh
@@ -56,7 +56,7 @@ do
       echo '?>' >> login.php
       
      # mysql -u $C9_USER -p$pwd -e "CREATE DATABASE artgallery"
-      mysql -u $C9_USER -p$pwd artgallery < setup.sql
+      mysql -u $C9_USER -p$pwd < setup.sql
       
     fi
   fi
