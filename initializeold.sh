@@ -1,14 +1,4 @@
 #!/bin/bash
-# Prepares Cloud9 workspace for use with PLTW CSP curriculum
-
-echo "Initializing Cloud9 container for use in PLTW CSP."
-echo "Installing PHP myAdmin."
-phpmyadmin-ctl install
-echo "Asking MySQL to list databases:"
-mysql "show databases;"
-# sudo apt-get install iputils-tracepath
-# previous command left in 2.1.3
-#!/bin/bash
 echo "Initializing Cloud9 container for use in PLTW CSP."
 echo "Installing PHP myAdmin."
 phpmyadmin-ctl install
@@ -73,3 +63,4 @@ do
 done
 
 # create database for Activity 2.2.2
+
