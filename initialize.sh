@@ -72,4 +72,7 @@ do
   fi
 done
 
+# Remove git branch from shell prompt.
+sed -i -e "s/\$(__git_ps1 \" (%s)\")//" ../.bashrc
+source ../.bashrc 
 # create database for Activity 2.2.2
