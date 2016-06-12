@@ -4,22 +4,20 @@
 echo "Initializing Cloud9 container for use in PLTW CSP."
 echo "Installing PHP myAdmin."
 phpmyadmin-ctl install
+
 echo "Asking MySQL to list databases:"
 mysql "show databases;"
-# sudo apt-get install iputils-tracepath
-# previous command left in 2.1.3
-#!/bin/bash
-echo "Initializing Cloud9 container for use in PLTW CSP."
-echo "Installing PHP myAdmin."
-phpmyadmin-ctl install
-echo "PHPMyAdmin installed."
-echo
-echo $C9_USER
-
-#This works:
-#echo "Asking MySQL to list databases:"
+# Also works:
 #mysql -u $C9_USER -e "show databases; use mysql; show tables;"
 
+# This command used to enable tracepath for 2.1.3:
+# sudo apt-get install iputils-tracepath
+
+
+echo
+echo "C9 username: "$C9_USER
+
+# Change SQL password
 echo "Because the system offers MySQL access to the world through PHPMyAdmin,"
 echo "You will need to set a password for MySQL."
 echo "In a secure location, write down a new secure password (8+ chars) for MySQL."
@@ -51,9 +49,11 @@ do
       echo "sed \"s/\$dbpass=.*/\$dbpass='"$pwd"';/\" /etc/phpmyadmin/config-db.php > /etc/phpmyadmin/config-db.php" >> setup2.sh
       chmod 711 setup2.sh
       
-      echo 'apt-get install python-dev' >> setup2.sh
-      echo 'apt-get install libjpeg-dev' >> setup2.sh
-      echo 'apt-get install libjpeg-dev' >> setup2.sh
+      # This is now included in PHP5 workspace template.
+      # echo 'apt-get install python-dev' >> setup2.sh
+      
+      # This package is no longer located by apt-get
+      # echo 'apt-get install libjpeg-dev' >> setup2.sh
       
       echo "You will still need to execute step2 to update the PHPMyAdmin control-user password. At the $ prompt, type:"
       echo "     \$ sudo ./setup2.sh"
@@ -74,5 +74,7 @@ done
 
 # Remove git branch from shell prompt.
 sed -i -e "s/\$(__git_ps1 \" (%s)\")//" ../.bashrc
-source ../.bashrc 
-# create database for Activity 2.2.2
+# Apply the new .bashrc to the current shell (This doesn't work from the script)
+# source ../.bashrc 
+
+# Create database for Activity 2.2.2
