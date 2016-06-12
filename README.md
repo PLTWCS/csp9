@@ -5,7 +5,7 @@ Materials for PLTW Computer Science Principles for Cloud9. Scroll to read all of
 As instructed in Part III of the Lesson 2.1 Supplement, please type three commands at the Bash prompt below. After each command, press enter and wait for the prompt to appear again.
 
  * `chmod 711 initialize.sh`
- * `./initialize.sh`
+ * `./initialize.sh`. Create and record a password for this workspace's MySQL server as directed.
  * `sudo ./setup2.sh`
 
 The `(master)` in the Bash prompt is git-related; The `initialize.sh` script will change your `.bashrc` file so that the Bash prompt of any Bash shells you open in the future will not show the git branch. 
