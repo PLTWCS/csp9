@@ -1,7 +1,7 @@
 <?php
 // This block allows our program to access the MySQL database.
 // Stores your login information in PHP variables
-require_once 'studentdb.php';
+require_once '../login.php';
 // Accesses the login information to connect to the MySQL server using your credentials and database
 $db_server = mysql_connect($host, $username, $password);
 // This provides the error message that will appear if your credentials or database are invalid
