@@ -85,7 +85,7 @@ do
   fi
 done
 
-# Remove git branch from shell prompt.
-sed -i -e "s/\$(__git_ps1 \" (%s)\")//" ../.bashrc
+# Remove git branch from shell prompt. Removed v1.01.
+# sed -i -e "s/\$(__git_ps1 \" (%s)\")//" ../.bashrc
 # Apply the new .bashrc to the current shell (This doesn't work from the script)
 # source ../.bashrc 
