@@ -81,6 +81,12 @@ do
       # Create and populate the database.
       mysql -u $C9_USER -p$pwd < setup.sql
       
+      #####
+      # Create database for Activity 2.2.3
+      ####
+      mysql -u $C9_USER -p$pwd -e "CREATE DATABASE shoes;"
+      
+      
     fi
   fi
 done
