@@ -40,7 +40,7 @@ do
     else
       echo
       echo "Changing MySQL password..."
-      mysql -u $C9_USER -e "set password for 'mepi'@'%'=password('"$pwd"');"
+      mysql -u $C9_USER -e "set password for '$C9_USER'@'%'=password('"$pwd"');"
       echo "MySQL password changed. Use this password for MySQL and for PHPMyAdmin."
       
       echo
