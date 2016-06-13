@@ -49,7 +49,7 @@ do
       echo "# Script created by initialize.sh for commands that require sudo." >> setup2.sh
       echo "">> setup2.sh
       
-      echo sed \"s/\$dbpass=.*/\$dbpass='"$pwd"';/\" /etc/phpmyadmin/config-db.php > /etc/phpmyadmin/config-db.php" >> setup2.sh
+      echo "sed \"s/\$dbpass=.*/\$dbpass='"$pwd"';/\" /etc/phpmyadmin/config-db.php > /etc/phpmyadmin/config-db.php" >> setup2.sh
       chmod 711 setup2.sh
       
       # This is now included in PHP5 workspace template.
@@ -85,7 +85,7 @@ do
   fi
 done
 
-# Remove git branch from shell prompt. Removed v1.01.
-# sed -i -e "s/\$(__git_ps1 \" (%s)\")//" ../.bashrc
+# Remove git branch from shell prompt. 
+sed -i -e "s/\$(__git_ps1 \" (%s)\")//" ../.bashrc
 # Apply the new .bashrc to the current shell (This doesn't work from the script)
 # source ../.bashrc 
