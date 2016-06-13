@@ -1,6 +1,6 @@
 
 /**
- * CSE Activity 2.2.2 IntroducingPHP
+ * CSP Activity 2.2.2 IntroducingPHP
  * 
  * 222indexB.php models use of PHP in conjunction with MySQL, JavaScript, and CSS
  * @copyright 2014 Project Lead The Way, Inc.

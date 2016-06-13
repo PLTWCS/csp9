@@ -3,15 +3,15 @@
  * CSP Activity 2.2.2 IntroducingPHP
  * 
  * 222indexA.php models use of PHP in conjunction with MySQL
- * @copyright 2016 Project Lead The Way
- * @version 2016.04.18
+ * @copyright 2014 Project Lead The Way
+ * 
  */
 
 /* 
 This block allows our program to access the MySQL database.
 Elaborated on in 2.2.3.
  */
-require_once 'login.php';
+require_once '../login.php';
 $db_server = mysql_connect($host, $username, $password);
 if (!$db_server) die("Unable to connect to MySQL: " . mysql_error());
 mysql_select_db($dbname)

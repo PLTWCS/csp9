@@ -1,7 +1,7 @@
 from sys import argv
 import os.path              
 from PIL import Image
-""" 2014.5.21 """
+
 dir = "/home/ubuntu/workspace/"
 filename = os.path.join(dir, argv[1], argv[2])
 

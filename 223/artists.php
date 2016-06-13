@@ -1,22 +1,21 @@
 <?php
+// Demonstrate a single SQL call from PHP
     
-    //Connect to the database
-    $host = "127.0.0.1";
-    $user = "bennettbrown";                     //Your Cloud 9 username
-    $pass = "wowd00D";                                  //Remember, there is NO password by default!
-    $db = "art";                                  //Your database name you want to connect to
-    $port = 3306;                                //The port #. It is always 3306
-    
-    $connection = mysqli_connect($host, $user, $pass, $db, $port)or die(mysql_error());
+// Accesses the login information to connect to the MySQL server using your credentials and database
+require_once '../login.php';
+$connection = mysql_connect($host, $username, $password);
 
 
 
-    //And now to perform a simple query to make sure it's working
-    $query = "SELECT * FROM artists";
-    $result = mysqli_query($connection, $query);
 
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo "The ID is: " . $row['artistID'] . " and the Username is: " . $row['username'];
-    }
+// Perform a simple query to make sure it's working
+$query = "SELECT * FROM artists";
+$result = mysqli_query($connection, $query);
+
+//Print the result. The variable row iterates through the results. 
+//A row's columns are accessed like a Python key-value dictionary using a PHP "associative array"
+while ($row = mysqli_fetch_assoc($result)) {
+    echo "The ID is: " . $row['artistID'] . " and the Username is: " . $row['username'];
+}
 
 ?>

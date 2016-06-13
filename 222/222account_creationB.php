@@ -1,9 +1,9 @@
 <?php
 /**
- * CSE Activity 2.2.2 IntroducingPHP
+ * CSP Activity 2.2.2 IntroducingPHP
  * 
  * 222account_creation.php allows users to create artist accounts
- * @copyright Unpublished work 2014 Project Lead The Way
+ * @copyright 2014 Project Lead The Way
  * @version 2014.5.21
  */
 
@@ -15,7 +15,7 @@ echo "Or click <a href='222indexB.php'>here to go back to the index</a>.<br />";
 This block allows our program to access the MySQL database.
 Elaborated on in 2.2.3.
  */
-require_once 'login.php';
+require_once '../login.php';
 $db_server = mysql_connect($host, $username, $password);
 if (!$db_server) die("Unable to connect to MySQL: " . mysql_error());
 mysql_select_db($dbname)
