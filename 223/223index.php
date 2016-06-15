@@ -6,11 +6,11 @@ require_once '../login.php';
 $db_server = mysql_connect($host, $username, $password);
 // This provides the error message that will appear if your credentials or database are invalid
 if (!$db_server) die("Unable to connect to MySQL: " . mysql_error());
-mysql_select_db($dbname)
+mysql_select_db("shoes")
 	or die("Unable to select database: " . mysql_error());
 	
-// Store the query string from 2.2.3.A Step 17
-$query = "SELECT * FROM requests WHERE model_id=1";
+// Store the query string from 2.2.3.A Step 23
+$query = "SELECT * FROM request WHERE model_id=1";
 		
 // Searches the database returning results that match the query
 // Results come in a table stored in $requests_for_model
