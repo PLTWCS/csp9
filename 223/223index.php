@@ -10,7 +10,7 @@ mysql_select_db($dbname)
 	or die("Unable to select database: " . mysql_error());
 	
 // Store the query string from 2.2.3.A Step 17
-$query = "SELECT * FROM requests WHERE model_id=1";
+$query = "SELECT * FROM request WHERE model_id=1";
 		
 // Searches the database returning results that match the query
 // Results come in a table stored in $requests_for_model
