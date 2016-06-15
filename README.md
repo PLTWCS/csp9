@@ -14,4 +14,4 @@ The workspace should serve to the web at `https://<workspacename>-<c9username>.c
 
 The `(master)` in the Bash prompt is git-related; ignore it. 
 
-v1.02 
+v1.03 
