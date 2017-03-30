@@ -10,7 +10,7 @@ mysql_select_db("shoes")
 	or die("Unable to select database: " . mysql_error());
 	
 // Store the query string from 2.2.3.A Step 17
-$query = "SELECT city FROM store_info NATURAL JOIN request NATURAL JOIN shoe WHERE model_id=1";
+$query = "SELECT city FROM store_info NATURAL JOIN requests NATURAL JOIN shoes WHERE model_id=1";
 		
 // Searches the database returning results that match the query
 // Results come in a table stored in $requests_for_model
