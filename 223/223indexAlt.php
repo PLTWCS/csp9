@@ -9,7 +9,7 @@ if (!$db_server) die("Unable to connect to MySQL: " . mysql_error());
 mysql_select_db("shoes")
 	or die("Unable to select database: " . mysql_error());
 	
-// Store the query string from 2.2.3.A Step 23
+// Store the query string from 2.2.3.A Step 17
 $query = "SELECT city FROM store_info NATURAL JOIN request NATURAL JOIN shoe WHERE model_id=1";
 		
 // Searches the database returning results that match the query
