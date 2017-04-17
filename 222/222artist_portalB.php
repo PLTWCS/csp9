@@ -89,8 +89,8 @@ if (isset($_SERVER['PHP_AUTH_USER']) &&
 				you are now logged in as '$row[1]'";
 			// Creates form fields to change artist info using the POST method.
 			echo '<form action="222artist_portalB.php" method="post" enctype="multipart/form-data"><pre>';
-			echo 'First Name <input type="text" name="firstname" />	' . $row[3];
-			echo '<br />Last Name <input type="text" name="lastname" />	' . $row[4];
+			echo 'First Name <input type="text" name="firstname" value="'.$row[3].'"/>';
+			echo '<br />Last Name <input type="text" name="lastname" value="'.$row[4].'"/>';
 			echo '<br /><input type="submit" value="CHANGE INFO" />'; 
 			// Allows user to select a file to upload and upload it.
 			echo '<br />Select Image to Upload: <input type="file" name="filename" />' .
